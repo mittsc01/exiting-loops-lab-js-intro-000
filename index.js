@@ -15,5 +15,11 @@ function keepGoing(array,changeValue,skipValue){
   return array
 }
 function findBy(array,findFn){
-  find(array,findFn)
+  let val=findFn();
+  for (let item of array){
+    if (item===val){
+      return item
+    }
+  }
+  return null
 }
